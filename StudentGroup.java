@@ -25,24 +25,51 @@ public class StudentGroup implements StudentArrayOperation {
 
 	@Override
 	public Student[] getStudents() {
-		// Add your implementation here
+			
 		return null;
 	}
 
 	@Override
 	public void setStudents(Student[] students) {
 		// Add your implementation here
+		try
+		{
+			if(students==null)
+			{
+				throw new IllegalArgumentException();
+			}
+		}catch(IllegalArgumentException e)
+		{
+			System.out.println(e);
+		}
 	}
 
 	@Override
 	public Student getStudent(int index) {
 		// Add your implementation here
+		try
+		{
+			if(index<0||index>=students.length)
+			{
+				throw new IllegalArgumentException();
+				}
+			else
+			{
+		      return students[index];
+			}
+		}
+		catch(IllegalArgumentException e)
+		{
+			System.out.println(e);
+		}
 		return null;
 	}
 
 	@Override
 	public void setStudent(Student student, int index) {
 		// Add your implementation here
+		
+		
 	}
 
 	@Override
